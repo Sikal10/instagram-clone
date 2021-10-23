@@ -1,16 +1,17 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
+@layer components {
+    .nav-btn {
+        @apply h-6 hidden md:inline-flex cursor-pointer hover:scale-125 transition-all duration-150 ease-out
+    }
+    .btn {
+        @apply h-6 cursor-pointer hover:scale-125 transition-all duration-150 ease-out
+    }
+    .upload-btn {
+        @apply inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600
+        text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring focus:ring-offset-2 focus:ring-red-500
+        sm:text-sm disabled:bg-gray-300 disabled:cursor-not-allowed hover:disabled:bg-gray-300
+    }
 }
